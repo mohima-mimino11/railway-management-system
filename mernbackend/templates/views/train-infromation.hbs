@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font integration-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Railway Reservation System</title>
+    <!-- styles  -->
+    <link rel="stylesheet" href="styles/traininfo.css">
+    <!-- fontawesom styles  -->
+    <script src="https://kit.fontawesome.com/0a1c131728.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- header section start  -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-logo">
+                <img src="images/Train-Image1.png" alt="nav-logo">
+
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home </a></li>
+                    <li><a href="profile-show.html">My Profile</a></li>
+                    <li><a href="train-information.html">Train Information</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- form & banner section starts  -->
+        <div class="main-container">
+            <div class="search-container">
+                <form>
+                    <label for="select-option">Select an option:</label>
+                    <select id="select-option">
+                        <option value="CHATTALA-EXPRESS-1">CHATTALA-EXPRESS</option>
+                        <option value="PADMA-EXPRESS">PADMA-EXPRESS</option>
+                        <option value="PAHARIKA-EXPRESS">PAHARIKA-EXPRESS</option>
+                        <option value="MOHANAGAR-EXPRESS">MOHANAGAR-EXPRESS</option>
+                        <option value="RANGPUR-EXPRESS">RANGPUR-EXPRESS</option>
+                    </select>
+                    <button id="submit-btn">Submit</button>
+                </form>
+            </div>
+
+            <div class="image-box">
+                <div id="option-data">
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- footer end  -->
+
+    <!-- script JS  -->
+    <script>
+        const submitBtn = document.getElementById('submit-btn');
+        const selectOption = document.getElementById('select-option');
+        const optionData = document.getElementById('option-data');
+
+        submitBtn.addEventListener('click', (event) => {
+            event.preventDefault(); // prevent the form from submitting
+
+            // get the selected option
+            const selectedOption = selectOption.value;
+
+            // display the selected option's data
+            switch (selectedOption) {
+                case 'CHATTALA-EXPRESS-1':
+                    optionData.innerHTML = ` <div>CHATTALA EXPRESS \n \n Runs On: Fri Sat Sun Mon Tue(off day) Wed Thu \n Routes: \n
+                    Chattogram   :- Arrival: 00:00am  Departure: 08:30am Duration: 00:00h
+                    Kumira :- Arrival: 08:58am Departure: 09:00am Duration: 00:28h
+                    Feni :- Arrival: 10:10am Departure: 10:15am Duration: 01:10h 
+                    Nangolkot :- Arrival: 10:48am Departure: 10:50am  Duration: 00:08h
+                    Laksam :- Arrival: 11:07am Departure: 11:12am Duration: 00:17h
+                    Cumilla :- Arrival: 11:52am Departure: 11:57am Duration: 00:40h
+                    Quasba :- Arrival: 12:38pm Departure: 12:40pm Duration: 00:16h
+                    Akhaura :- Arrival: 01:02pm Departure: 01:05pm Duration: 00:22h
+                    Brahmanbaria :- Arrival: 01:2pm Departure: 01:28pm Duration: 00:20h
+                    Biman_Bandar :- Arrival: 03:10pm Departure: 03:12pm Duration: 00:42h
+                    Dhaka :- Arrival: 03:50pm Departure: 00:00 Duration: 00:38h \n
+                    Total Duration: 07:20h
+                    </div>
+       `;
+                    break;
+                case 'PADMA-EXPRESS':
+                    optionData.innerHTML = `PADMA EXPRESS \n \n Runs On: Fri Sat Sun Mon Tue(off day) Wed Thu \n Routes: \n
+                    Dhaka :- Arrival: 00:00pm Departure: 11:00pm Duration: 00:00h
+                    Biman_Bandar :- Arrival: 11:27pm Departure: 11:32pm Duration: 00:27h
+                    Joydebpur :- Arrival: 12:00 am Departure: 12:05am Duration: 00:28h
+                    Tangail :- Arrival: 01:00am Departure: 01:05am Duration: 00:55h
+                    BBSetu_E :- Arrival: 01:25am Departure: 01:35am Duration: 00:20h
+                    SH M Monsur Ali :- Arrival: 02:01am Departure: 02:04am Duration: 00:26h
+                    Ullapara :- Arrival: 02:21am Departure: 02:23am Duration: 00:17h
+                    Boral_Bridge :- Arrival: 02:41am Departure: 02:44am Duration: 00:18h
+                    Chatmohar :- Arrival: 02:57am Departure: 03:01am Duration: 00:13h
+                    Ishwardi Bypass :- Arrival: 03:20am Departure: 03:23am Duration: 00:19h
+                    Abdulpur :- Arrival: 03:36am Departure: 03:38am Duration: 00:13h
+                    Rajshahi :- Arrival: 04:30am Departure: Duration: ---h
+                    Total Duration: 05:30h
+
+       `;
+                    break;
+                case 'PAHARIKA-EXPRESS':
+                    optionData.innerHTML = `\n \n PAHARIKA EXPRESS \n \n Runs On: Fri Sat(off day) Sun Mon Tue Wed Thu \n Routes: \n
+                    Sylhet :- Arrival: 00:00 Departure: 10:15am Duration: 00:00h
+                    Maijgaon :- Arrival: 10:53am Departure: 10:55am Duration: 00:38h
+                    Kulaura :- Arrival: 11:24am Departure: 11:27am Duration: 00:29h
+                    Shamshernagar :- Arrival: 11:55am Departure: 11:57am Duration: 00:28h
+                    Sreemangal :- Arrival: 12:29pm Departure: 12:32pm Duration: 00:20h
+                    Shaistaganj :- Arrival: 01:12pm Departure: 01:15pm Duration: 00:40h
+                    Nayapara :- Arrival: 01:40 pm  Departure: 01:42pm Duration: 00:25h
+                    Cumilla :- Arrival: 04:32pm Departure: 04:35pm Duration: 00:47h
+                    Laksam :- Arrival: 05:00pm Departure: 05:05pm Duration: 00:25h
+                    Nangolkot :- Arrival: 05:21pm Departure: 05:24pm Duration: 00:16h
+                    Feni :- Arrival: 05:50pm Departure: 05:55pm Duration: 00:26h
+                    Chattogram :- Arrival: 07:35pm Departure: 00:00pm Duration: 01:40h
+                    Total Duration: 09:20h
+
+
+       `;
+                    break;
+                case 'MOHANAGAR-EXPRESS':
+                    optionData.innerHTML = `\n \n MOHANAGAR EXPRESS \n \n Runs On: Fri Sat Sun(off day) Mon Tue Wed Thu \n Routes: \n
+                    Dhaka :- Arrival: 00:00 Departure: 09:20pm Duration: 00:00h
+                    Biman_Bandar :- Arrival: 09:47pm Departure: 09:52pm Duration: 00:27h
+                    Narsingdi :- Arrival: 10:32pm Departure:10:34pm Duration: 00:40h
+                    Bhairab_Bazar :- Arrival: 11:05pm Departure: 11:08pm Duration: 00:31h
+                    Ashuganj :- Arrival: 11:16pm Departure: 11:18pm Duration: 00:08h
+                    Brahmanbaria :- Arrival: 11:33pm Departure: 11:37pm Duration: 00:15h
+                    Akhaura :- Arrival: 12:05am Departure: 12:08am Duration: 00:28h
+                    Quasba :- Arrival: 12:37am Departure: 12:40am Duration: 00:29h
+                    Cumilla :- Arrival: 01:47am Departure: 01:50am Duration: 01:07h
+                    Laksam :- Arrival: 02:15am Departure: 02:20am Duration: 00:25h
+                    Nangolkot :- Arrival: 02:35am Departure: 02:37am Duration: 00:15h
+                    Feni :- Arrival: 03:03am Departure: 03:08am Duration: 00:26h
+                    Kumira :- Arrival: 04:14am Departure: 04:20am Duration: 01:06h
+                    Chattogram :-  Arrival: 04:50 am Departure: 00:00am Duration: ---h
+                    Total Duration: 07:30h
+
+
+       `;
+                    break;
+                case 'RANGPUR-EXPRESS':
+                    optionData.innerHTML = `\n \n RANGPUR EXPRESS \n Runs On: Fri Sat Sun(off day) Mon Tue Wed Thu \n Routes: \n
+                    Rangpur :- Arrival: 00:00pm Departure: 08:10pm Duration: --h
+                    Kurigram :- Arrival: 07:20pm Departure: 07:40pm Duration: 00:50h
+                    Kaunia :- Arrival: 08:30pm Departure: 08:50pm Duration: 00:50h
+                    Pirgacha :- Arrival: 09:05pm Departure: 09:07pm Duration: 00:15h
+                    Bamondanga :- Arrival: 09:24pm Departure: 09:26pm Duration: 00:17h
+                    Gaibandha :- Arrival: 09:56pm Departure: 09:59pm Duration: 00:30h
+                    Bonar_Para :- Arrival: 10:19pm Departure: 10:29pm Duration: 00:20h
+                    Sonatola :- Arrival: 10:44pm Departure: 10:46pm Duration: 00:15h
+                    Bogura :- Arrival: 11:14pm Departure: 11:17pm Duration: 00:28h
+                    Talora :- Arrival: 11:36pm Departure: 11:36pm Duration: 00:19h
+                    Santahar :- Arrival: 12:05am Departure: 12:10am Duration: 00:29h
+                    Natore :- Arrival: 01:06am Departure: 01:16am Duration: 00:56h
+                    BBSetu_E :- Arrival: 03:59am Departure: 04:01am Duration: 02:43h
+                    Dhaka :- Arrival: 06:10am Departure: 00:00am Duration: 02:09h
+                    Total Duration: 10:00h
+
+
+
+       `;
+                    break;
+                default:
+                    optionData.innerHTML = '';
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font integration-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<title>Railway Reservation System</title>
+	<!-- styles  -->
+	<link rel="stylesheet" href="styles/index.css">
+    <!-- tailwind css  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+	<!-- fontawesom styles  -->
+	<script src="https://kit.fontawesome.com/0a1c131728.js" crossorigin="anonymous"></script>	
+    <title>Profile</title>
+</head>
+<body>
+    <!-- header section start  -->
+	<header class="header">
+		<nav class="nav-container">
+			<div class="nav-logo">
+				<img src="images/Train-Image1.png" alt="nav-logo">
+				
+			</div>
+			<div class="nav-menu">
+				<ul>
+					<li><a href="index.html">Home </a></li>
+					
+					<li><a href="train-information.html">Train Information</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+					<li><a href="index.html">Logout</a></li>
+                    <!-- <li><a href="profile-show.html">My Profile</a></li> -->
+				</ul>
+			</div>
+		</nav>
+		
+	</header>
+
+    <main class="mx-96 mt-32 ">
+        <table id="profile-table" class="table">
+            <tr class="" >
+                <td   class="text-green-800 font-bold " >User Name: <span id="uname"></span> </td>
+            </tr>
+			<tr class="" >
+                <td   class="text-green-800 font-bold mt-12" >Email: <span id="Email"></span> </td>
+            </tr>
+        </table>
+    </main>
+
+   
+    <script src="../src/app.js"></script>
+</body>
+</html>
