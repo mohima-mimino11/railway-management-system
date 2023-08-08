@@ -4,4 +4,4 @@
 - HTML, CSS
 - JavaScript, express Js, Handlebars
 - MongoDB(Remote Database)
-use script ``npm run dev`` to run after navigating into mernbackend.
+-use script ``npm run dev`` to run after navigating into mernbackend.
